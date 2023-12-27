@@ -58,11 +58,11 @@ docker追加目录映射： /home/data
 
 
 
-![a61cbdece3775d5c2cb28e91d1e35ec.png](img/docker清除日志、docker追加目录映射/GetImage.ashx)
+![a61cbdece3775d5c2cb28e91d1e35ec.png](../img/docker清除日志、docker追加目录映射/GetImage.ashx)
 使用visual studio格式化json
 
-![430060f68e2e48657348cc6a855c895.png](img/docker清除日志、docker追加目录映射/GetImage.ashx)
+![430060f68e2e48657348cc6a855c895.png](../img/docker清除日志、docker追加目录映射/GetImage.ashx)
 
 
 
-![479463e8598809fc84d3edf71a2a782.png](img/docker清除日志、docker追加目录映射/GetImage.ashx)
+![479463e8598809fc84d3edf71a2a782.png](../img/docker清除日志、docker追加目录映射/GetImage.ashx)

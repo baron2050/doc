@@ -12,7 +12,7 @@ function translates any variables according to a list of regular expressions. It
 very useful to normalize dialed numbers and caller IDs and select different types
 of routing services.
 
-![image-20210419091444272](img/Dialplan and Routing/image-20210419091444272.png)
+![image-20210419091444272](../img/Dialplan and Routing/image-20210419091444272.png)
 
 ## PSTN routing Receiving calls from PSTN
 
@@ -96,7 +96,7 @@ exit;
 }
 The corresponding DB content is as follows:
 Set ID Match operator Match exp Subst exp Replace exp
-![image-20210419092746686](img/Dialplan and Routing/image-20210419092746686.png)
+![image-20210419092746686](../img/Dialplan and Routing/image-20210419092746686.png)
 
 
 
@@ -153,7 +153,7 @@ if ( !dp_translate("2","$rU") ) {
 }
 The following is the corresponding DB content:
 
-![image-20210419093759022](img/Dialplan and Routing/image-20210419093759022.png)
+![image-20210419093759022](../img/Dialplan and Routing/image-20210419093759022.png)
 
 ## Script samples
 
@@ -166,17 +166,17 @@ Rules group 20 for prefix-based routing to gateways
 
 The following is the dr_gateways table:
 
-![image-20210419094615118](img/Dialplan and Routing/image-20210419094615118.png)
+![image-20210419094615118](../img/Dialplan and Routing/image-20210419094615118.png)
 
 The dr_rules table is as follows:
 
-![image-20210419094650585](img/Dialplan and Routing/image-20210419094650585.png)
+![image-20210419094650585](../img/Dialplan and Routing/image-20210419094650585.png)
 
 The script for the dialplan module is as follows:
 
 Group 1 to normalize the in and out PSTN numbers in the E.164 format
 
-![image-20210419094745348](img/Dialplan and Routing/image-20210419094745348.png)
+![image-20210419094745348](../img/Dialplan and Routing/image-20210419094745348.png)
 
 
 
