@@ -50,7 +50,7 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
 - 信令交互逻辑
 
-​      ![img](img/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221041354-1111469874.png) 
+​      ![](images/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221041354-1111469874.png) 
 
 - 信令处理逻辑
 
@@ -92,7 +92,7 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
 四、模拟的呼叫场景：
 
-​    ![img](img/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221250616-1813717684.png)
+​    ![](images/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221250616-1813717684.png)
 
  
 
