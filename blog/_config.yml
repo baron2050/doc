@@ -13,13 +13,33 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://doibest.eu.org
+url: https://7775210.xyz
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
+# Site settings
+# 网站综合内容设置：
+SEOTitle: 馒头笔记
+email: doibest@hotmail.com
+keyword: "hexo,doibest,馒头,opensip,freeswitch,asterisk,java,并发 "
+
+# SNS settings
+# 一些社交平台地址，支持以下几种：
+# weibo_username:
+# zhihu_username:
+github_username: baron2050
+# twitter_username:   iconie_alloy
+# facebook_username:
+# linkedin_username:  小涛-聂-80964aba
+
+
+# Build settings
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+sidebar-avatar: images/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Friends
 # 友情链接
@@ -61,22 +81,22 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace: ''
   wrap: true
   hljs: false
   enable: true
-prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
-  enable: true
+#prismjs:
+#  preprocess: true
+#  line_number: true
+#  tab_replace: ''
+#  enable: true
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
