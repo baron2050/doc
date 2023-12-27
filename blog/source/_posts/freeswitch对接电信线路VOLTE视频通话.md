@@ -1,6 +1,9 @@
 ---
 title: freeswitch对接电信线路VOLTE视频通话
----
+tags: 
+    - freeswitch
+    - 5g
+--- 
 
 对接VOLTE视频通话需在profile设置上视频编码。或在public.xml上设置出局视频编码。
 
@@ -38,3 +41,10 @@ a=rtcp-fb:99 nack pli
 ```
 
 至此测试就正常了。
+
+后面分析freeswitch源码，支持外呼的时候通过设置通道变量来设置5G参数，最后呼出字符串为也可以。
+其中NDLB_line_flash_16：设置dtmf的数量
+rtp_force_video_fmtp： 修改视频sdp参数
+```
+ String format = String.format("originate {origination_uuid=%s,core_video_blank_image=false,core_video_blank_image_at_play_end=false,ignore_early_media=false,origination_caller_id_number=02569850568,NDLB_line_flash_16=true,rtp_force_video_fmtp='a=fmtp:102 profile-level-id=42C01f;sprop-parameter-sets=Z0LAHtoFB+gG0KE1\\,aM4G4g==;packetization-mode=1;sar-understood=16;sar-supported=1',absolute_codec_string=^^:PCMA:PCMU:H264}sofia/external/%s@112.2.38.105:20580 &park", uuid,tel);
+```
