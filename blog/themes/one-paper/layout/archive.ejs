@@ -3,6 +3,12 @@
         <% page.posts.each(function (post) { %>
         <li>
             <span class="archive-date"><%= date(post.date, "YYYY.MM.DD") %></span>
+            <% if (theme.busuanzi && theme.busuanzi.enable && !index){ %>
+            <!-- 不蒜子统计 -->
+            <span id="busuanzi_container_page_pv" style='display:none' class="<%= class_name %>">
+                  <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+            </span>
+            <% } %>
             <div class="archive-main">
                 <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
                 <!-- <a class="read-more" href="<%- url_for(post.path) %>"> ... </a> -->
