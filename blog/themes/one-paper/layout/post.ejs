@@ -7,6 +7,10 @@
         </div>
         <div class="post-meta">
             <%- date(page.date, "YYYY-MM-DD") %>
+            <% if (theme.busuanzi && theme.busuanzi.enable && !index){ %>
+                 <!-- 不蒜子统计 -->
+                阅读数：<span id="busuanzi_value_page_pv"></span>次
+            <% } %>
         </div>
         <div class="post-md">
             <%- page.content %>
