@@ -1,5 +1,6 @@
-# C常用函数
-
+---
+title: C常用函数
+---
 ## strncasecmp()函数
 
 头文件：#include <string.h>
