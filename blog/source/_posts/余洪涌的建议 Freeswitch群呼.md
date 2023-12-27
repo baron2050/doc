@@ -6,7 +6,11 @@ title: 余洪涌的建议 Freeswitch群呼
 
 /Sofia_Profiles/internal.xml
 
-设置参数： <param name="manage-presence" value="**false**"/> 这个设置为 false
+设置参数： 
+```
+<param name="manage-presence" value="**false**"/>
+```
+这个设置为 false
 以提高性能。
 
 此外，禁用数据库模式： FreeswitchConsole.exe -nonat -**nosql**
