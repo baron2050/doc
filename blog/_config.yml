@@ -13,12 +13,33 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://doibest.eu.org
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+
+
+# Friends
+# 友情链接
+friends: [
+    {
+        title: "馒头笔记",
+        href: "https://7775210.xyz"
+    }
+]
+
+
+# 搜索数据文件路径设置，不建议改动：
+search:
+  path: search.json
+  field: post
+
+# 文章样式(是否首行缩进)：
+post_style:
+  indent: 0
+
 
 # Directory
 source_dir: source
@@ -98,7 +119,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: one-paper
+theme: aircloud
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
