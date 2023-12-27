@@ -29,10 +29,10 @@ keyword: "hexo,doibest,馒头,opensip,freeswitch,asterisk,java,并发 "
 # SNS settings
 # 一些社交平台地址，支持以下几种：
 # weibo_username:
-# zhihu_username:
+zhihu_username: doibest
 github_username: baron2050
 # twitter_username:   iconie_alloy
-# facebook_username:
+facebook_username: doibest1989
 # linkedin_username:  小涛-聂-80964aba
 
 
