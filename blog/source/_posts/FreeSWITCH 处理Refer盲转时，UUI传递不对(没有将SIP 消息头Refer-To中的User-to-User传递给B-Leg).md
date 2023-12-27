@@ -50,7 +50,7 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
 - 信令交互逻辑
 
-​      ![]('/images/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221041354-1111469874.png') 
+​      ![]('/images/773260-20200921221041354-1111469874.png') 
 
 - 信令处理逻辑
 
@@ -92,7 +92,7 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
 四、模拟的呼叫场景：
 
-​    ![](/images/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/773260-20200921221250616-1813717684.png)
+​    ![](/images/773260-20200921221250616-1813717684.png)
 
  
 
@@ -134,7 +134,7 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
   收到来电后，自动应答，然后播放一段提示音后，refer 盲转到296896
 
-[![复制代码](img/FreeSWITCH 处理Refer盲转时，UUI传递不对(没有将SIP 消息头Refer-To中的User-to-User传递给B-Leg)/copycode.gif)](javascript:void(0);)
+[![复制代码](/images/copycode.gif)](javascript:void(0);)
 
 ```
   <extension name="outbound-test2">

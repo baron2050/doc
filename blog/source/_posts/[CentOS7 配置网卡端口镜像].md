@@ -30,7 +30,7 @@ Architecture: x86_64
 
 部署图大致如下
 
-![](/images/[CentOS7 配置网卡端口镜像]/495966-20161228001347195-532046690.png)
+![](/images/495966-20161228001347195-532046690.png)
 
 办公网某主机IP: 192.168.118.1（演示时用的VMware的NAT模式，宿主机）
 
@@ -48,7 +48,7 @@ Architecture: x86_64
 
 查看路由设置
 
-[![复制代码](img/[CentOS7 配置网卡端口镜像]/copycode.gif)](javascript:void(0);)
+[![复制代码](/images/copycode.gif)](javascript:void(0);)
 
 ```
 [root@ted ~]# route -n
@@ -59,7 +59,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.118.0   0.0.0.0         255.255.255.0   U     100    0        0 eth0
 ```
 
-[![复制代码](img/[CentOS7 配置网卡端口镜像]/copycode.gif)](javascript:void(0);)
+[![复制代码](/images/copycode.gif)](javascript:void(0);)
 
 所有192.168.12.0网段的流量都走eth1网卡（此网卡与服务器B的eth0直连）
 
@@ -97,7 +97,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
  在服务器A上开httpd服务器，用办公网主机访问该服务
 
-![](/images/[CentOS7 配置网卡端口镜像]/495966-20161228002703398-1948062865.png)
+![](/images/495966-20161228002703398-1948062865.png)
 
  
 
@@ -107,7 +107,7 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 
 这里为了演示，使用“办公机访问服务器A的httpd服务”代替“办公网镜像流量”，实际情况应该是服务器A网卡eth0是不配置IP的。
 
-![](/images/[CentOS7 配置网卡端口镜像]/495966-20161228004526867-1564865189.png)
+![](/images/495966-20161228004526867-1564865189.png)
 
  
 
