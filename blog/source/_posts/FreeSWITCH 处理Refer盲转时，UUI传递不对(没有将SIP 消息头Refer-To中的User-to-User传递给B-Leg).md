@@ -134,8 +134,6 @@ Remote-Party-ID: "Extension 296898" <sip:296898@10.2.32.90>;party=calling;screen
 
   收到来电后，自动应答，然后播放一段提示音后，refer 盲转到296896
 
-[![复制代码](/images/copycode.gif)](javascript:void(0);)
-
 ```
   <extension name="outbound-test2">
     <condition field="destination_number" expression="^449998$">

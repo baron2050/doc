@@ -5,8 +5,8 @@
 # Site
 title: 馒头笔记
 subtitle: '热爱祖国 服务人民 诚实守信 遵纪守法'
-description: ''
-keywords:
+description: '软交换'
+keywords: "hexo,doibest,馒头,opensip,freeswitch,asterisk,java,并发"
 author: doibest
 language: zh
 timezone: ''
@@ -24,14 +24,14 @@ pretty_urls:
 # 网站综合内容设置：
 SEOTitle: 馒头笔记
 email: doibest@hotmail.com
-keyword: "hexo,doibest,馒头,opensip,freeswitch,asterisk,java,并发 "
+keyword: "hexo,doibest,馒头,opensip,freeswitch,asterisk,java,并发"
 
 # SNS settings
 # 一些社交平台地址，支持以下几种：
 # weibo_username:
 zhihu_username: doibest
 github_username: baron2050
-# twitter_username:   iconie_alloy
+twitter_username:  doibest1989
 facebook_username: doibest1989
 # linkedin_username:  小涛-聂-80964aba
 

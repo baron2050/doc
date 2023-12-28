@@ -48,8 +48,6 @@ Architecture: x86_64
 
 查看路由设置
 
-[![复制代码](/images/copycode.gif)](javascript:void(0);)
-
 ```
 [root@ted ~]# route -n
 Kernel IP routing table
@@ -58,8 +56,6 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 192.168.12.0    0.0.0.0         255.255.255.0   U     0      0        0 eth1
 192.168.118.0   0.0.0.0         255.255.255.0   U     100    0        0 eth0
 ```
-
-[![复制代码](/images/copycode.gif)](javascript:void(0);)
 
 所有192.168.12.0网段的流量都走eth1网卡（此网卡与服务器B的eth0直连）
 
