@@ -43,7 +43,10 @@ pip install scipy == 1.5.4
 pip install tensorflow == 1.15.2
 pip install torch==1.7.1+cu110 torchvision==0.8.1+cu110 torchaudio==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 ```
-
+也可以直接使用三方docker
+```ini
+docker run -itd mcxai/dinet:v1.0
+```
 ### 下载并配置openface，这里给大家提供好下载地址
 
 > \1. 项目链接: [github.com/TadasBaltru…](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2FTadasBaltrusaitis%2FOpenFace) 
