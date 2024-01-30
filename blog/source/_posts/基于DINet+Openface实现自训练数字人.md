@@ -1,6 +1,5 @@
 ---
 title: 基于DINet+Openface实现自训练数字人
-date: 2024-01-31
 ---
 
 ### 前言
