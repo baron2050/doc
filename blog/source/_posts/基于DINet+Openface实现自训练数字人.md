@@ -85,13 +85,13 @@ syncnet模型的下载地址：[pan.baidu.com/s/1Roqdts5i…](https://link.jueji
 
 **在assets文件夹下创建如下3个文件夹：**
 
-![img](/images/1.png)
+![img](/images/基于DINet实现自训练数字人/1.png)
 
 - inference_result：存放最后生成的推理视频（自动存放）
 - traininng_model_weight：存放预训练的模型权重
 - traininng_data：存放要进行训练时使用到的处理数据
 
-**在traininng_data下创建如下6个文件夹：** ![img](/images/2.png)
+**在traininng_data下创建如下6个文件夹：** ![img](/images/基于DINet实现自训练数字人/2.png)
 
 - split_video_25fps：存放处理好的25fps的视频片段
 - split_video_25fps_audio：存放提取到的视频片段中的所有音频片段
@@ -104,25 +104,25 @@ syncnet模型的下载地址：[pan.baidu.com/s/1Roqdts5i…](https://link.jueji
 
 打开OpenFaceOfflinne.exe工具，如下图在工具栏的Record选项下取消Record pose和Record gaze选项
 
-![img](/images/3.png)
+![img](/images/基于DINet实现自训练数字人/3.png)
 
 然后点击file，选择你要处理的视频（可多选），注意如果视频处理过程中出现卡死或者OpenFace软件闪退，那该视频需删除，不再使用，同时删除对应的处理数据（下面会说处理数据的位置）
 
-![img](/images/4.png)
+![img](/images/基于DINet实现自训练数字人/4.png)
 
-正常处理视频片段的效果如下，(这个是在Mac平台安装Openface后的处理效果图，不建议在Windows进行，mac下安装Openface地址：[github.com/TadasBaltru…](https://github.com/TadasBaltrusaitis/OpenFace) ，后面有时间了我出一期Openface在mac下的安装教程，还有些坑，装完后的使用也摸索了一下，总之真香~ ![img](/images/4.png)
+正常处理视频片段的效果如下，(这个是在Mac平台安装Openface后的处理效果图，不建议在Windows进行，mac下安装Openface地址：[github.com/TadasBaltru…](https://github.com/TadasBaltrusaitis/OpenFace) ，后面有时间了我出一期Openface在mac下的安装教程，还有些坑，装完后的使用也摸索了一下，总之真香~ ![img](/images/基于DINet实现自训练数字人/4.png)
 
 openface在处理某个视频片段过程会生成三个文件，路径如下，在openface安装路径下的processed文件中，这三个文件中txt格式文件是视频解析过程中详细数据文件，没什么用，可以删掉，avi文件打开后是脸部打点的视频转换文件，没有声音，后面也不会用到；最重要的是csv文件，里面存放着脸部的数据解析文件，打开后可以看到有一些坐标信息，后面要用到。注意：如果某个视频处理中断了，或者openface闪退了，这里需将对应的三个文件也删除掉：
 
-![img](/images/6.png)
+![img](/images/基于DINet实现自训练数字人/6.png)
 
 视频片段全部处理完毕，需将processed文件夹中所有csv文件拷贝到上述说到的assets文件夹下的traininng_data文件夹下的split_video_25fps_lanndmark_openface文件夹中：
 
-![img](/images/7.png)
+![img](/images/基于DINet实现自训练数字人/7.png)
 
 注意需要将开始用来训练的mp4片段放到assets文件夹下的traininng_data文件夹下的split_video_25fps文件夹中，不是openface处理后的avi文件，是原始mp4文件：
 
-![img](/images/8.png)
+![img](/images/基于DINet实现自训练数字人/8.png)
 
 视频处理时长和视频的清晰度以及视频片段的长短都有关系，我这里15min的4k视频大概处理了1h左右。
 
@@ -137,11 +137,11 @@ css
 
 执行完成后，打开./asserts/training_data/split_video_25fps_frame文件夹，可以看到处理的图片帧数据
 
-![img](/images/9.png)
+![img](/images/基于DINet实现自训练数字人/9.png)
 
 注意：这一步在执行过程中可能会报错，因为在生成帧过程中，会产生空帧（概率性），所以代码中需要做下过滤，要不就会卡住，打开data_processing.py文件，我这里用的是pycharm，找到extract_video_frame函数，在函数最后找到写入图片帧的部分，添加判断：如果当前帧为空帧，不再写入，具体代码如下：
 
-![img](/images/10.png)
+![img](/images/基于DINet实现自训练数字人/10.png)
 
 ```css
 css复制代码if frame is not None:
@@ -159,7 +159,7 @@ css
 
 执行完成后，打开./asserts/training_data/split_video_25fps_audio文件夹，可以看到提取后的音频文件
 
-![img](/images/11.png)
+![img](/images/基于DINet实现自训练数字人/11.png)
 
 ### 提取音频文件中的深度语音特征并保存
 
@@ -170,7 +170,7 @@ css
 
 执行完成后，打开./asserts/training_data/split_video_25fps_deepspeech文件夹，可以看到提取的深度语音特征文件
 
-![img](/images/12.png)
+![img](/images/基于DINet实现自训练数字人/12.png)
 
 ### 提取视频中面部特征图像
 
@@ -181,7 +181,7 @@ css
 
 执行完成后，打开./asserts/training_data/split_video_25fps_crop_face文件夹，可以看到提取的面部特征图片
 
-![img](/images/13.png)
+![img](/images/基于DINet实现自训练数字人/13.png)
 
 ### 生成预训练json文件
 
@@ -192,7 +192,7 @@ css
 
 执行完成后，打开./asserts/training_data文件即可看到生成的预训练json文件
 
-![img](/images/14.png)
+![img](/images/基于DINet实现自训练数字人/14.png)
 
 ### 开始模型训练（Frame training）
 
@@ -209,11 +209,11 @@ css
 
 该步骤我这边执行了大概8h左右，因为我是直接执行到了400pth自动结束的，网上有一些资料显示，训练过程lr_g学习率参数逐步衰减为原来的50%就可以停下来了，因为前期学习率大，会加速学习，使得模型更容易接近局部或全局最优解。但是在后期会有较大波动，甚至出现损失函数的值围绕最小值徘徊，波动很大，始终难以达到最优。所以这里代码中使用了学习率衰减的概念，直白点说，就是在模型训练初期，会使用较大的学习率进行模型优化，随着迭代次数增加，学习率会逐渐进行减小，保证模型在训练后期不会有太大的波动，从而更加接近最优解，当lr_g衰减到原来的50%，模型基本可以使用了（大家可自行测试）。训练过程中会显示如下画面，剩下就是漫长的等待了.......
 
-![img](/images/15.png)
+![img](/images/基于DINet实现自训练数字人/15.png)
 
 这一步训练如果等他自动结束，可以打开./asserts/training_model_weight/frame_training_64文件夹，查看训练的模型，保留最后一个netG_model_epoch_400.pth就可以了，其他可以删掉了
 
-![img](/images/16.png)
+![img](/images/基于DINet实现自训练数字人/16.png)
 
 第一步训练结束，接下来进行128x128的模型训练，这一步需要加载第一步中预训练的（面部：104x80,嘴巴64x64）模型，并开始（面部208x160,嘴部：128x128）的训练，具体命令如下：
 
@@ -267,7 +267,7 @@ css
 
 注意：我这里推理出来的面部带关键点，是因为开始的训练视频使用avi导致，应该使用最初的mp4视频片段
 
-![img](/images/17.png)
+![img](/images/基于DINet实现自训练数字人/17.png)
 
 -001_synthetic_face.mp4：推理出来脸部合成视频
 
