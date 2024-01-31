@@ -1,5 +1,8 @@
 ---
 title: Java使用JavaCV中的FFmpeg合成视频
+tags: 
+    - freeswitch
+    - 5g
 ---
 # 一、FFmpeg简介
 

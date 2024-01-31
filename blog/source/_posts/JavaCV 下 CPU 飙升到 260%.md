@@ -1,5 +1,8 @@
 ---
 title: JavaCV 下 CPU 飙升到 260%
+tags: 
+    - java
+    - 音视频处理
 ---
 ### 描述
 
