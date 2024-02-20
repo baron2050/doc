@@ -55,6 +55,10 @@ friends: [
     {
       title: "央视网",
       href: "https://www.cctv.com/"
+    },
+    {
+      title: "netlify",
+      href: "https://www.netlify.com/"
     }
 ]
 
