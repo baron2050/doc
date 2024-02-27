@@ -1,5 +1,8 @@
 ---
 title: ffmpeg-python的基本用法
+tags: 
+    - python
+    - 音视频处理
 ---
 # ffmpeg-python的基本用法
 
